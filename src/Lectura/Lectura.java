@@ -40,4 +40,17 @@ public class Lectura {
         }
         
     }
+     public void leerComentarioCompleto() throws FileNotFoundException {
+                    Scanner lectura = new Scanner(new File("salida.txt"));
+
+        while(lectura.hasNext()){
+            String rol = lectura.nextLine();
+            String[] palabraspartir1 = rol.split(";");
+            if (palabraspartir1[0].equals(" COMENTARIO")){
+                System.out.println(palabraspartir1[1]+";"+palabraspartir1[2]+";"+palabraspartir1[3]);
+            }
+            
+        }
+        
+    }
 }

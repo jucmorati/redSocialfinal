@@ -220,7 +220,7 @@ public class Main {
                     for(int i =0; i<comentar.size();i++){
                        
                             //System.out.println(comentar.get(i).getComentario());
-                            lectura.leerComentario(nick); //mil cosas aca
+                            lectura.leerComentario(nick); //mil cosas aca,se repite el resultado
                        
                     }
                    break; 
@@ -247,9 +247,10 @@ public class Main {
                     palabralistar=sc.nextLine();
                     for (int i=0;i<comentar.size();i++){
                     String[] palabras = comentar.get(i).getComentario().split(" ");
-                        for(int j=0;j<comentar.get(i).getComentario().length();j++){
+                       for(int j=0;j<palabras.length;j++){
                             if(palabras[j].equals(palabralistar)) {
-                            System.out.println(comentar.get(i).toString());                            
+                            //System.out.println(comentar.get(i).toString());
+                         lectura.leerComentarioCompleto();// aca igualmente se repiten los resultados pero sirve
                             }
                             
                         }
