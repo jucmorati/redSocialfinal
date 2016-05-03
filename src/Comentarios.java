@@ -1,5 +1,5 @@
 
-import java.util.Date;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,13 +14,15 @@ import java.util.Date;
 public class Comentarios {
     private String comentario;
     private String fechacreacion;
+    private String nick1;
 
-    public Comentarios(String comentario, String fechacreacion) {
+    public Comentarios(String comentario, String fechacreacion,String nick1) {
         if(comentario.length() >= 200) {
             throw new IllegalArgumentException("El tamaño del comentario es muy grande");
         }
         this.comentario = comentario;
         this.fechacreacion = fechacreacion;
+        this.nick1=nick1;
     }
 
     public String getComentario() {
@@ -37,6 +39,14 @@ public class Comentarios {
 
     public void setFechacreacion(String fechacreacion) {
         this.fechacreacion = fechacreacion;
+    }
+
+    public String getNick1() {
+        return nick1;
+    }
+
+    public void setNick1(String nick1) {
+        this.nick1 = nick1;
     }
 
     @Override

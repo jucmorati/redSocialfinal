@@ -23,12 +23,12 @@ public class Usuarios {
     
 
     public Usuarios(String nombre, String nick, int edad, String clave, String correo) {
-        if (nombre.length()>=100){
-            throw new IllegalArgumentException("El tamaño del comentario es muy grande");
-        }
+       
         if (edad<18){
             throw new IllegalArgumentException("es necesario ser mayor de edad");
         }
+  
+        
         if (clave.equals("123456")){
             throw new IllegalArgumentException("contraseña no permitida");
         }
@@ -38,6 +38,9 @@ public class Usuarios {
         this.clave = clave;
         this.correo = correo;
         this.comentario=new ArrayList<Comentarios>();
+        if (comentario.size()>200){
+            //throw new IllegalArgumentException("Comentario muy extenso, disminuya la cantidad de caracteres");
+        }
         this.fotografias=new ArrayList<Fotografia>();
 
         

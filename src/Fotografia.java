@@ -57,6 +57,11 @@ public void addUsuario (String nick){
 public void addCoordenadas(Coordenadas coor){
     coordenadas.add (coor);
 }
+
+    @Override
+    public String toString() {
+        return "Fotografia{" + "nombrearchivo=" + nombrearchivo + ", publico=" + publico + ", descripcionopcional=" + descripcionopcional + ", etiquetados=" + etiquetados + ", coordenadas=" + coordenadas + '}';
+    }
  
     
 }

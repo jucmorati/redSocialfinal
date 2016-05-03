@@ -1,0 +1,5 @@
+
+USUARIO;cam;cam;23;cam;cam
+ COMENTARIO;hola1;2;cam
+ COMENTARIO;hola2;cam;cam
+ COMENTARIO;hola2 ggg;222;cam

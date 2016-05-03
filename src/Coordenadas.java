@@ -38,6 +38,11 @@ public class Coordenadas {
     public void setY(int y) {
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "Coordenadas{" + "x=" + x + ", y=" + y + '}';
+    }
     
 
     
