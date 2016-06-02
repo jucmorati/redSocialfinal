@@ -1,4 +1,5 @@
 
-USUARIO;cam;cam;23;cam;cam
- COMENTARIO;hola como estas;222;cam
- COMENTARIO;bien hola ;333;cam
+USUARIO;camilo;cam;18;cam;cam
+ COMENTARIO;hola ;222;cam
+USUARIO;felipe;fel;23;fel;fel
+ FOTOGRAFIA;fotos;fofof;cam;[cam, fel, andres];[Coordenadas{x=3, y=4}, Coordenadas{x=3, y=3}, Coordenadas{x=5, y=5}]

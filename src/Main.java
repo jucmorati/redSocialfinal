@@ -195,13 +195,13 @@ public class Main {
                                 " y minimo 1 n-usuario");
                     }                    
                     redSocialFotos.add(fotografia);
-                     try {
+                    try {
                             
                         ps.append("\n "+"FOTOGRAFIA"+";"+fotografia.getNombrearchivo()+";"+fotografia.getDescripcionopcional()+";"+fotografia.getPublico()+";"+fotografia.etiquetados+";"+fotografia.coordenadas);
                         ps.close();
                                         
-                     } catch (Exception e) {
-                    }
+                    } catch (Exception e) {}
+                    
                     System.out.println("FOTO SUBIDA CORRECTAMENTE");
                     break;                    
                 case 4:
@@ -217,24 +217,20 @@ public class Main {
                 case 5:
                     System.out.println("ingrese el nick del usuario que busca");
                     nick=sc.nextLine();
-                    for(int i =0; i<comentar.size();i++){
-                       
+                    for(int i =0; i<comentar.size();i++){                       
                             //System.out.println(comentar.get(i).getComentario());
-                            lectura.leerComentario(nick); //mil cosas aca,se repite el resultado
-                       
+                            lectura.leerComentario(nick); //mil cosas aca,se repite el resultado                      
                     }
                    break; 
                 case 6:
                     System.out.println("ingrese el nombre del usuario que busca");
                     nick=sc.nextLine();
                     for(Usuarios usu: redSocial) {                       
-                        if (nick.equals(usu.getNick())){
-                            
+                        if (nick.equals(usu.getNick())){                            
                             for(Fotografia foto: usu.fotografias) {
                                 System.out.print(foto.getNombrearchivo()+" "+
                                     " fue publicada por " + foto.getPublico()+
-                                   "en la foto aparecen: ");
-                                
+                                   "en la foto aparecen: ");                                
                                 for(String name: foto.etiquetados) {
                                     System.out.print(name+" ");
                                 }
@@ -251,14 +247,12 @@ public class Main {
                             if(palabras[j].equals(palabralistar)) {
                             //System.out.println(comentar.get(i).toString());
                          lectura.leerComentarioCompleto();// aca igualmente se repiten los resultados pero sirve
-                            }
-                            
+                            }                            
                         }
                     }
                     break;
-            }    
-            
-    }
- }               
+            }              
+        }
+    }               
 }  
 
